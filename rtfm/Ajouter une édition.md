@@ -38,10 +38,8 @@ Tout ce qui suit se fait depuis le manager MODX.
 - Recommencez pour toutes les salles, pour chaque jour.
 
 ### Créez les Events :
-- Faites un clic gauche sur la salle où vous souhaitez créer l'Event
-- Cliquez sur "Nouvel Event"
-- Remplissez les champs connus à ce jour puis Enregistrez
-- Recommencez autant qu'il le faut :)
+
+Accéder à la page de documentation [Ajouter un Event] (rtfm/Ajouter un Event.md)
 
 ## Archiver l'année précédente
 Une fois la nouvelle édition à peu près en place (c'est-à-dire avec les bons jours, les salles quasi définitives et à minima un certains nombres d'Events en place), on va pouvoir la publier à la place de celle de l'année précédente.

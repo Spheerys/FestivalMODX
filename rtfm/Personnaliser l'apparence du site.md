@@ -1,6 +1,6 @@
 # Modifier l'apparence du site
 
-Si vous disposez d'une instance fonctionnelle de FestivalMODX, vous allez sûrement voiloir modifier l'apparence graphique du site.
+Si vous disposez d'une instance fonctionnelle de FestivalMODX, vous allez sûrement vouloir modifier l'apparence graphique du site.
 
 Ce dépôt contient les éléments statiques du site, à savoir :
 - les fonts
