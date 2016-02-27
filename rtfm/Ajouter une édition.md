@@ -15,7 +15,7 @@ Tout ce qui suit se fait depuis le manager MODX.
 - Dans l'onglet Ressource :
   * Modifiez de suite le modèle "Édition", puis validez le changement
 - Toujours dans l'onglet Ressource :
-  * Titre : l'année en cours 20**
+  * Titre : l'année en cours (ex. 2017)
   * Titre de menu : Programme 20**
 - Tout en bas, choisissez le premier horaire de démarrage d'une conférence lors de cette édition (utile pour caler la vue Calendrier corectement)
 - Enregistrez
@@ -39,13 +39,13 @@ Tout ce qui suit se fait depuis le manager MODX.
 
 ### Créez les Events :
 
-Accéder à la page de documentation [Ajouter un Event] (rtfm/Ajouter un Event.md)
+Accéder à la page de documentation [Ajouter un Event] (Ajouter un Event.md)
 
 ## Archiver l'année précédente
 Une fois la nouvelle édition à peu près en place (c'est-à-dire avec les bons jours, les salles quasi définitives et à minima un certains nombres d'Events en place), on va pouvoir la publier à la place de celle de l'année précédente.
 
 En fait, l'archivage se fait déjà tout seul.
-La manip consiste à enlever dans le menu, le lien vers l'année précédente, vers un lien vers l'année en cours.
+La manip consiste à remplacer dans le menu le lien vers l'année précédente, vers un lien vers l'année en cours.
 Et de s'assurer que tout va bien :)
 
 _Tuto à venir_
