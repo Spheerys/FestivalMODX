@@ -1,4 +1,4 @@
-# Ajouter une édition
+# Ajouter une édition annuelle
 
 Chaque année, il va falloir intervenir sur le site pour :
 - ajouter une nouvelle année et commencer à créer les jours, les salles et les Events
@@ -43,5 +43,9 @@ Accéder à la page de documentation [Ajouter un Event] (rtfm/Ajouter un Event.m
 
 ## Archiver l'année précédente
 Une fois la nouvelle édition à peu près en place (c'est-à-dire avec les bons jours, les salles quasi définitives et à minima un certains nombres d'Events en place), on va pouvoir la publier à la place de celle de l'année précédente.
+
+En fait, l'archivage se fait déjà tout seul.
+La manip consiste à enlever dans le menu, le lien vers l'année précédente, vers un lien vers l'année en cours.
+Et de s'assurer que tout va bien :)
 
 _Tuto à venir_
