@@ -1,0 +1,19 @@
+// ---------------------------------
+// Mise en place de la grille Susy
+// ---------------------------------
+
+$susy: (
+  // debug: (
+  //   image: show,
+  //   output: overlay
+  //   ,
+  //   toggle: top right,
+  // ),
+  global-box-sizing: border-box,
+  columns: 12,
+  gutters: 1/4,
+  container: 1180px,
+  gutter-position: after,
+  container-position: center
+);
+

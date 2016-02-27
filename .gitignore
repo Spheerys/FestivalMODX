@@ -1,0 +1,12 @@
+# Feuilles de styles CSS compilées
+/assets/css/
+
+# Bibliothèques et packages nécessaires à la compilation du SASS mais qui ne doivent pas être versionnés
+/src/vendor/
+/src/.bundle/
+
+# Cache de la compilation du SASS
+/src/compass/.sass-cache/
+
+# Fichiers temporaires ou de backups
+*.old

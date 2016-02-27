@@ -1,0 +1,52 @@
+// =====================================================================
+// RÈGLES D'AGENCEMENT COMMUNES
+// ----------------------------
+// Struture globale du site
+// Les spécificités sont gérées dans /page/
+// =====================================================================
+
+
+*
+  box-sizing: border-box
+
+
+body
+  // @include border-box-sizing
+  // position: relative
+
+
+// .menu-top
+//   +span(24)
+
+.wrapper
+  +container($susy)
+  padding: gutter(12)
+  margin-top: 20px
+
+.bg-white
+  background: white
+
+.pagetitle
+  text-transform: uppercase
+  margin-top: 20px
+  h1
+    margin-bottom: 0
+
+
+// .wrap
+//   +container($susy)
+//   margin: 0 gutter(4)/2
+//   // min-height: 20vh
+
+//   +breakpoint($tablet)
+//     +container(8)
+//     +show-grid(8)
+//     margin: 0 gutter(8)
+//   +breakpoint($desktop)
+//     +container(10)
+//     +show-grid(10)
+
+
+
+footer
+  +clearfix

@@ -1,0 +1,629 @@
+
+
+.programme--vues
+  padding: 10px 0
+  li
+    display: inline-block
+    font-size: .9em
+  a
+    display: block
+    color: $color-dark
+    padding: 5px 10px
+    font-weight: bold
+    &.active
+      background: $color-hot
+
+.programme--content
+  // padding: 0
+  +breakpoint($desktop)
+    padding: 0
+
+.programme--aside
+  +span(2 of 12)
+  +breakpoint($phone2phablet)
+    +span(full)
+
+.export-icones
+  color: black
+  +last
+
+//   .d88888b                                      dP       dP
+//   88.    "'                                     88       88
+//   `Y88888b. .d8888b. .d8888b. 88d888b. .d8888b. 88d888b. 88d888b. .d8888b. dP.  .dP
+//         `8b 88ooood8 88'  `88 88'  `88 88'  `"" 88'  `88 88'  `88 88'  `88  `8bd8'
+//   d8'   .8P 88.  ... 88.  .88 88       88.  ... 88    88 88.  .88 88.  .88  .d88b.
+//    Y88888P  `88888P' `88888P8 dP       `88888P' dP    dP 88Y8888' `88888P' dP'  `dP
+//
+//
+#searchBox
+  margin-bottom: 10px
+  width: 100%
+  background: $color-dark-lighter
+  color: white
+  padding: 8px
+  +breakpoint($phone2phablet)
+    +span(full)
+
+  p
+    font-weight: 500
+    font-size: .8em
+    +breakpoint($phone2phablet)
+      margin-bottom: 0 !important
+    //   line-height: 2.2em
+    //   text-align: right
+    // +breakpoint($phone)
+    //   +span(6 of 12)
+
+  input
+    width: 100%
+    font-size: .9em
+    margin-top: 5px
+    border: 0
+    padding: 7px
+    background-image: none
+    +breakpoint($phone2phablet)
+      width: auto
+      margin-top: 0
+      margin-left: 10px
+
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner
+  border: none
+
+
+//    88888888b oo dP   dP
+//    88           88   88
+//   a88aaaa    dP 88 d8888P 88d888b. .d8888b. .d8888b.
+//    88        88 88   88   88'  `88 88ooood8 Y8ooooo.
+//    88        88 88   88   88       88.  ...       88
+//    dP        dP dP   dP   dP       `88888P' `88888P'
+//
+//
+
+//@extend-elements
+//original selectors
+//.button, #display-list button
+.extend_1
+  display: block
+  padding: 0.5em
+  border: none
+  border-bottom: 1px solid $color-dark
+  color: #999
+  cursor: pointer
+  background: $color-dark-lighter
+  font-weight: 500
+  font-size: .8em
+  line-height: 1.4em
+  //If you use compass, instead of the line below you could use +transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: color 0.2s
+  //If you use compass, instead of the line below you could use +transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: background-color 0.2s
+
+
+//original selectors
+//.button-group .button, #display-list button
+.extend_2
+  //If you use compass, instead of the line below you could use +border-radius($radius, $vertical-radius)
+  border-radius: 0
+  width: 100%
+  margin: 0
+
+
+//original selectors
+//.item h2, .item h3
+.extend_3
+  font-size: 14px
+  line-height: 1.4em
+  color: $color-dark
+
+
+//original selectors
+//.item footer:after, .item header:after
+.extend_4
+  display: table
+  content: ''
+  clear: both
+
+#filters
+  +breakpoint($phone2phablet)
+    +span(full)
+    font-size: .9em
+  +breakpoint($phone)
+    font-size: .8em
+  h3
+    font-size: .9em
+    color: $color-dark
+    text-align: center
+    margin: 5px 0
+
+
+.ui-group
+  +breakpoint($phone2phablet)
+    +span(3 of 12)
+    &:last-of-type
+      +last
+
+    // .button-group
+    //   +span(8 of 9 last)
+    //   margin-bottom: 2px
+    // .button
+    //   float: left
+    //   width: auto !important
+    //   margin-right: 1px
+    //   border: 0
+    &.tags .button:not(:first-of-type)
+      font-size: .7em
+
+
+#display-list button
+  @extend .extend_1
+  @extend .extend_2
+  display: inline-block
+  float: left
+  width: 50%
+  border-bottom: 0
+  border-right: 1px solid #222
+  &:hover
+    color: #fff
+
+  &:active
+    background-color: #222
+
+  &.is-checked
+    background-color: #222
+    color: #fff
+
+  &:last-child
+    border: none
+
+.ui-group.what .button
+  color: white
+  &:hover
+    color: #E3E3E3
+  &.conferences
+    background: $color-type-conference
+    &:hover
+      background: lighten($color-type-conference,10%)
+  &.ateliers
+    background: $color-type-atelier
+    color: $color-type-atelier-font
+    &:hover
+      background: lighten($color-type-atelier,20%)
+  &.debats
+    background: $color-type-debat
+    &:hover
+      background: lighten($color-type-debat,10%)
+  &.autres
+    background: $color-type-autre
+    &:hover
+      background: lighten($color-type-autre,10%)
+
+
+
+
+.isotope
+  clear: both
+  &:after
+    content: ''
+    display: block
+    clear: both
+
+// .level-1 h2:after
+//   content: ' ♣'
+
+// .level-2 h2:after
+//   content: ' ♣♣'
+
+//    .88888.           oo dP dP               d8' dP        oo            dP
+//   d8'   `88             88 88              d8'  88                      88
+//   88        88d888b. dP 88 88 .d8888b.    d8'   88        dP .d8888b. d8888P .d8888b.
+//   88   YP88 88'  `88 88 88 88 88ooood8   d8'    88        88 Y8ooooo.   88   88ooood8
+//   Y8.   .88 88       88 88 88 88.  ...  d8'     88        88       88   88   88.  ...
+//    `88888'  dP       dP dP dP `88888P' 88       88888888P dP `88888P'   dP   `88888P'
+//
+//
+#isotope-title
+  height: 50px
+  div
+    display: inline-block !important
+    float: left !important
+    width: auto !important
+  .ui-group button
+    display: none
+    float: left !important
+    margin: 0 5px
+    width: auto !important
+    border: none !important
+    background: #ddd
+    color: #999
+    span
+      padding-left: 5px
+      display: inline-block
+      font-weight: 900
+    &.is-checked
+      background-color: #ddd
+      color: #999
+      cursor: pointer
+    &:hover
+      color: $color-dark !important
+
+
+
+
+.button
+  @extend .extend_1
+  &:hover
+    color: #fff
+
+  &:active
+    background-color: #222
+
+  &.is-checked
+    background-color: #222
+    color: #fff
+    cursor: default
+
+
+.button-group
+  width: 100%
+  margin-bottom: 10px
+  &:after
+    content: ''
+    display: block
+    clear: both
+
+  .button
+    @extend .extend_2
+    &:last-child
+      border: none
+
+
+
+//    88888888b dP     dP  88888888b 888888ba  d888888P .d88888b      .d888888   888888ba   88888888b  .d888888
+//    88        88     88  88        88    `8b    88    88.    "'    d8'    88   88    `8b  88        d8'    88
+//   a88aaaa    88    .8P a88aaaa    88     88    88    `Y88888b.    88aaaaa88a a88aaaa8P' a88aaaa    88aaaaa88a
+//    88        88    d8'  88        88     88    88          `8b    88     88   88   `8b.  88        88     88
+//    88        88  .d8P   88        88     88    88    d8'   .8P    88     88   88     88  88        88     88
+//    88888888P 888888'    88888888P dP     dP    dP     Y88888P     88     88   dP     dP  88888888P 88     88
+//
+//
+.programme--events
+  +span(10 of 12 last)
+  +breakpoint($phone2phablet)
+    +span(full)
+
+
+//   dP     dP                                                   dP
+//   88     88                                                   88
+//   88     88 88d888b.    .d8888b. dP   .dP .d8888b. 88d888b. d8888P
+//   88     88 88'  `88    88ooood8 88   d8' 88ooood8 88'  `88   88
+//   Y8.   .8P 88    88    88.  ... 88 .88'  88.  ... 88    88   88
+//   `Y88888P' dP    dP    `88888P' 8888P'   `88888P' dP    dP   dP
+//
+//
+.item
+  width: 31.33%
+  +breakpoint($phablet)
+    width: 48%
+  +breakpoint($phone)
+    width: 98%
+  margin: 0 2% 2% 0
+  background: white
+  overflow: hidden
+  position: relative
+  +box-shadow(2px 2px  5px rgba(0,0,0,0.1))
+  p
+    font-size: 13px
+    padding: 0
+    margin: 5px 0
+    // padding-bottom: 8px
+    // margin-bottom: .5em
+
+  .item--header
+    padding: 5px 15px
+    background: grey
+    &:after
+      @extend .extend_4
+    .item--title
+      display: block
+
+
+  .item--content
+    padding: 10px 15px
+    .item--title
+      display: none
+
+
+  .item--title
+    @extend .extend_3
+    text-transform: uppercase
+    color: white
+    margin-bottom: 0
+    &:after
+      font-size: 17px
+      vertical-align: top
+      line-height: .9em
+
+
+  h3
+    @extend .extend_3
+    margin: 0 0 4px 0
+    text-transform: none
+    font-size: 13px
+    font-weight: 400
+    color: white
+    a
+      color: white
+
+
+  .item--footer
+    // position: relative
+    padding: 5px 15px
+    font-weight: 700
+    color: $color-dark
+    border-top: 1px dashed #ccc
+    &:after
+      @extend .extend_4
+
+    p
+      padding: 0
+
+  .infos-principales
+    +span(full)
+
+  // .liens-annexes
+  //   +span(30% last)
+
+  .item--salle
+    margin: 0
+    text-align: left
+
+  .item--date
+    font-weight: bold
+    text-align: left
+    margin: 0
+    spanap
+      // display: block
+      text-transform: capitalize
+
+
+  .item--level
+    font-size: .8em
+
+  &.type-conference .item--header
+    background: $color-type-conference
+  &.type-atelier .item--header
+    background: $color-type-atelier
+    h2, h3, a
+      color: black
+  &.type-debat .item--header
+    background: $color-type-debat
+  &.type-autre .item--header
+    background: $color-type-autre
+
+
+
+  //   dP        oo            dP   dP     dP oo
+  //   88                      88   88     88
+  //   88        dP .d8888b. d8888P 88    .8P dP .d8888b. dP  dP  dP
+  //   88        88 Y8ooooo.   88   88    d8' 88 88ooood8 88  88  88
+  //   88        88       88   88   88  .d8P  88 88.  ... 88.88b.88'
+  //   88888888P dP `88888P'   dP   888888'   dP `88888P' 8888P Y8P
+  //
+  //
+  &.display-list
+    +box-shadow(none)
+    +span(full)
+    margin: 0 0 2px 0
+    float: none
+    overflow: none
+    border-top: 0
+    &:hover
+      background: lighten($color-light, 2%)
+    .item--header
+      float: right
+      width: 20%
+      height: 100%
+      border: none
+      padding: 10px 15px
+      background: transparent
+      .item--title
+        display: none
+      +breakpoint($phone)
+        +span(6 of 12)
+        .item--title
+          display: block
+
+
+    .item--content
+      float: right
+      width: 55%
+      box-shadow: none
+      padding: 10px 15px
+      min-height: 60px
+      border-left: 1px dashed #d5d5d5
+      border-right: 1px dashed #d5d5d5
+      position: relative
+      .item--title
+        display: block
+        margin-top: 0
+      +breakpoint($phone)
+        +span(full)
+        padding-top: 0
+        .item--title, .item--tags, .item--links
+          display: none
+
+
+    .item--footer
+      height: 100%
+      float: left
+      width: 25%
+      border: none
+      padding: 10px 0 10px 15px
+      .item--salle
+        display: none
+      +breakpoint($phone)
+        +span(6 of 12 last)
+        position: absolute
+        top: 0
+        right: 10px
+        .item--salle, .item--date
+          display: block
+          text-align: right
+          font-size: .6em
+
+
+
+
+    .item--links a
+      color: $color-text-light
+    //   display: none
+    .item--salle, .item--date
+      margin-top: 0
+    h2, h3, a
+      color: black
+
+    &.type-conference
+      border-left: 10px solid $color-type-conference
+    &.type-atelier
+      border-left: 10px solid $color-type-atelier
+    &.type-debat
+      border-left: 10px solid $color-type-debat
+    &.type-autre
+      border-left: 10px solid $color-type-autre
+
+
+
+//   oo   dP                                         dP oo          dP
+//        88                                         88             88
+//   dP d8888P .d8888b. 88d8b.d8b.                   88 dP 88d888b. 88  .dP  .d8888b.
+//   88   88   88ooood8 88'`88'`88 88888888 88888888 88 88 88'  `88 88888"   Y8ooooo.
+//   88   88   88.  ... 88  88  88                   88 88 88    88 88  `8b.       88
+//   dP   dP   `88888P' dP  dP  dP                   dP dP dP    dP dP   `YP `88888P'
+//
+//
+.item--links
+  +inline-block-list
+  position: absolute
+  bottom: 0px
+  right: 10px
+  li
+    +inline-block-list-item
+  a
+    color: $color-text-light
+    &:hover
+      color: lighten($color-text-light, 10)
+    span
+      font-size: .9em
+  .flaticon-video-play:before
+    font-size: 1.7em
+
+.links--video_dld
+  background: $color-text-light
+  +border-radius(3px)
+  padding: 0px 3px 0px 2px
+  font-size: 0.7em
+  a
+    color: white !important
+  i:before
+    margin-left: 0
+
+.links--video_stream
+  font-size: 1.2em
+
+
+//   oo   dP                                           dP
+//        88                                           88
+//   dP d8888P .d8888b. 88d8b.d8b.                   d8888P .d8888b. .d8888b. .d8888b.
+//   88   88   88ooood8 88'`88'`88 88888888 88888888   88   88'  `88 88'  `88 Y8ooooo.
+//   88   88   88.  ... 88  88  88                     88   88.  .88 88.  .88       88
+//   dP   dP   `88888P' dP  dP  dP                     dP   `88888P8 `8888P88 `88888P'
+//                                                                        .88
+//                                                                    d8888P
+
+.item--tags
+  +inline-block-list
+  li
+    border: 1px solid #E7E7E7
+    font-size: .7em
+    // display: inline-block
+    padding: 0 3px
+    line-height: 2em
+    margin: 2px 0
+    color: darken($color-light, 40%)
+//   &:hover
+//     background: lighten(#222, 10%)
+//   a
+//     color: $color-light
+//     &:hover
+//       color: white
+
+
+//                                         dP        dP
+//                                         88        88
+//   .d8888b. dP   .dP .d8888b. 88d888b. d8888P    d8888P dP    dP 88d888b. .d8888b.
+//   88ooood8 88   d8' 88ooood8 88'  `88   88        88   88    88 88'  `88 88ooood8
+//   88.  ... 88 .88'  88.  ... 88    88   88        88   88.  .88 88.  .88 88.  ...
+//   `88888P' 8888P'   `88888P' dP    dP   dP        dP   `8888P88 88Y888P' `88888P'
+//                                                             .88 88
+//                                                         d8888P  dP
+.event--type
+  font-weight: normal
+  font-size: .7em
+  text-transform: capitalize
+  color: white
+  +border-radius(2px)
+  padding: 3px 0
+  margin: 0 2px 0 0
+  line-height: 1.1em
+  width: 2em
+  text-align: center
+  display: inline-block
+  &.type-conference
+    background: $color-type-conference
+  &.type-atelier
+    background: $color-type-atelier
+  &.type-debat
+    background: $color-type-debat
+  &.type-autre
+    background: $color-type-autre
+
+
+
+
+
+
+//   dP                                           dP
+//   88                                           88
+//   88 .d8888b. .d8888b. .d8888b. 88d888b. .d888b88 .d8888b.
+//   88 88ooood8 88'  `88 88ooood8 88'  `88 88'  `88 88ooood8
+//   88 88.  ... 88.  .88 88.  ... 88    88 88.  .88 88.  ...
+//   dP `88888P' `8888P88 `88888P' dP    dP `88888P8 `88888P'
+//                    .88
+//                d8888P
+
+.legende
+  +inline-block-list
+  text-align: right
+  margin-bottom: -30px
+  li
+    padding: 0 10px
+    color: white
+    font-size: .8em
+    &:first-of-type
+      color: black
+      text-align: right
+      padding: 0
+  .type-conference
+    background: $color-type-conference
+  .type-atelier
+    background: $color-type-atelier
+    color: black
+  .type-debat
+    background: $color-type-debat
+  .type-autre
+    background: $color-type-autre

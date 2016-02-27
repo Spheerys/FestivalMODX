@@ -1,0 +1,57 @@
+
+.spot
+  .map
+    // +span(9 of 12)
+    +span(full)
+    height: 450px
+    margin-bottom: 20px
+    // +breakpoint($phone)
+    //   +span(full)
+    //   height: 200px
+  .numa
+    +span(full)
+  .address
+    +span(4 of 12)
+  .metro
+    +span(4 of 12)
+  .web
+    +span(4 of 12 last)
+    // +breakpoint($phone)
+    //   +span(full)
+
+.se-loger
+  +span(6)
+  +breakpoint($phone)
+    +span(full)
+
+.discussion
+  +span(6 last)
+  +breakpoint($phone)
+    +span(full)
+
+//                         dP
+//                         88
+//   88d8b.d8b. .d8888b. d8888P 88d888b. .d8888b.
+//   88'`88'`88 88ooood8   88   88'  `88 88'  `88
+//   88  88  88 88.  ...   88   88       88.  .88
+//   dP  dP  dP `88888P'   dP   dP       `88888P'
+//
+//
+.type
+  border-radius: 50%
+  box-sizing: border-box
+  color: #fff
+  display: inline-block
+  font-size: 10px
+  font-weight: 900 !important
+  height: 15px
+  line-height: 15px
+  margin-bottom: 2px
+  text-align: center
+  text-transform: uppercase
+  vertical-align: middle
+  width: 15px
+  &.metro-3
+    background: #c4ca0c
+  &.metro-4
+    background: #b8268f

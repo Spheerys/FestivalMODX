@@ -1,0 +1,181 @@
+// A modifier chaque année si changement :
+// - l'amplitude horaire en minute (ci-dessous)
+// - adapter le call du chunk : AgendaDays10-23Tpl
+// - autour de la ligne 100 de ce fichier, adapter la taille des colonnes des horaires
+// - glisser l'année précédente dans les archives
+// - éditer le docid 3 et modifier le titre du menu
+// - modifier la page d'accueil en remplacant le CFH par l'annonce du programme
+
+$calendar_width: 100%
+
+$calendar_cols:  720
+// = amplitude horaire en minutes :
+//    - 660 = 12h-23h
+//    - 720 = 10h-22h
+//    - 780 = 10h-23h
+
+$calendar_gut: 0
+$calendar_col: ($calendar_width - ($calendar_gut * ($calendar_cols - 1))) / $calendar_cols
+$class-col-calendar: duration !default
+
+@for $i from 0 through $calendar_cols
+  $j: $i - 1
+  .#{$class-col-calendar}-#{$i}
+    width: ($i * $calendar_col) + ($j * $calendar_gut)
+  .start-#{$i}
+    left: ($i * $calendar_col)  + ($j * $calendar_gut)
+
+
+
+
+// .programme--vues
+//   padding: 10px 0
+//   a
+//     border: medium none !important
+//     display: inline-block
+//     padding: 5px 10px
+//     &.active
+//       background: #ffd13b
+
+
+.group-calendar
+  display: none
+
+.calendar
+  box-sizing: border-box
+  font-size: 11px
+  margin: 20px 0
+  width: 100%
+  +breakpoint($phone2phablet)
+    width: 1200px
+    padding-right: 10px
+  &::after
+    clear: both
+    content: ""
+    display: table
+  h2
+    font-size: 22px
+    font-weight: 500
+    margin: 50px 0 10px
+    text-transform: uppercase
+  .type-conference
+    border-top: 5px solid $color-type-conference
+  .type-atelier
+    border-top: 5px solid $color-type-atelier
+  .type-debat
+    border-top: 5px solid $color-type-debat
+  .type-autre
+    border-top: 5px solid $color-type-autre
+
+
+.calendar-item
+  background-color: #fff
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: 10px auto
+  border-left: 1px solid #dadada
+  box-sizing: border-box
+  display: table
+  float: left
+  height: 100%
+  line-height: 15px
+  margin: 0
+  padding: 0 3px
+  position: absolute
+  text-align: center
+  +box-shadow(0 0 0)
+  p
+    display: table-cell
+    padding: 0
+    vertical-align: middle
+    color: black
+    font-size: .8em
+  &.start-0:first-child
+    border-left: medium none
+  &:last-child::after
+    border-right: 1px solid #dadada
+    content: ""
+    height: 100%
+    position: absolute
+    right: -1px
+
+.calendar-header
+  padding-bottom: 5px
+  &::after
+    clear: both
+    content: ""
+    display: table
+  .calendar-hour
+    border: none
+    display: inline-block
+    float: left
+    font-weight: 700
+    text-align: center
+
+    // Amplitude 660min
+    // ================
+    // width: 9.09091%
+    // &:first-child, &:last-child
+    //   width: 4.54545%
+
+
+    // Amplitude 780min
+    // ================
+    // width: 7.691%
+    // &:first-child, &:last-child
+    //   width: 3.845%
+
+    // Amplitude 720min
+    // ================
+    width: 8.3%
+    &:first-child, &:last-child
+      width: 4.3%
+
+    &:first-child
+      text-align: left
+    &:last-child
+      text-align: right
+
+.calendar-body
+  background: #f0f0f0
+  border: 1px solid #dadada
+  border-bottom: 0
+  position: relative
+  +breakpoint($phone2phablet)
+    margin-left: 10px
+  &::after
+    clear: both
+    content: ""
+    display: table
+
+
+.calendar-row
+  border-bottom: 1px solid #dadada
+  background: image-url("vide.png")
+  box-sizing: border-box
+  clear: both
+  display: block
+  height: 85px
+  overflow: hidden
+  position: relative
+  width: 100%
+  &::after
+    clear: both
+    content: ""
+    display: table
+
+
+.calendar-room
+  position: absolute
+  +transform(rotate(-90deg))
+  margin-top: 32px
+  margin-left: -48px
+  height: 20px
+  width: 86px
+  text-align: center
+  +breakpoint($phone2phablet)
+    width: 74px
+    margin-left: -40px
+
+
+

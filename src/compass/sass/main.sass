@@ -1,0 +1,65 @@
+// **************************************************
+// FICHIER PRINCIPAL D'APPEL DES DIFFÉRENTS _PARTIALS
+// **************************************************
+
+
+// =====================================
+// Configuration des variables du projet
+// =====================================
+@import "partial/config"
+
+// Chargement des mixins de Compass
+@import "compass"
+
+// Système de grille sémantique
+@import "susy"
+
+// Système de Breakpoint / media query
+@import "breakpoint"
+
+
+// ======================================
+// Uniformisation des styles des éléments
+// ======================================
+@import "compass/reset"
+
+
+// ================
+// Éléments de base
+// ================
+@import "partial/general/grid"
+@import "partial/general/layout"
+@import "partial/general/fonts"
+@import "partial/general/base"
+@import "partial/general/mixins"
+
+
+// ==============
+// Modules
+// ==============
+@import "partial/module/button"
+@import "partial/module/header"
+@import "partial/module/menu"
+@import "partial/module/video"
+@import "partial/module/footer"
+@import "partial/module/friends"
+@import "partial/module/backtotop"
+
+
+// ==============
+// Élements tiers
+// ==============
+@import "partial/vendor/icons"
+
+
+// ===================
+// Surcharges par page
+// ===================
+@import "partial/page/accueil"
+@import "partial/page/call-for-hacks"
+@import "partial/page/programme"
+@import "partial/page/agenda"
+@import "partial/page/infospratiques"
+@import "partial/page/archives"
+@import "partial/page/partenaires"
+@import "partial/page/mentions-legales"

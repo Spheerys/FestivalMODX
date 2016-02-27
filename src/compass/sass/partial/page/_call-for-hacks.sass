@@ -1,0 +1,99 @@
+.cfh-intro
+  +span(full)
+.cfh-form
+  +span(full)
+  .part1
+    +span(6 of 12)
+    +breakpoint($phone2tablet)
+      +span(full)
+  .part2
+    +span(6 of 12 last)
+    +breakpoint($phone2tablet)
+      +span(full)
+.cfh-valid
+  +span(full)
+  text-align: center
+  margin: 2em auto 0
+
+
+
+/* call for hacks */
+.required
+  color: $color-light
+  // font-size: 70%
+  line-height: 10px
+  vertical-align: top
+  padding-left: 2px
+  input, textarea
+    background: white !important
+.requis
+  font-size: 80%
+  clear: both
+  text-align: right
+label
+  font-weight: 700
+  padding: 10px 0
+  display: block
+  color: black
+  font-size: 1.1em
+  margin-top: 1em
+  i
+    color: $color-hot
+  em
+    font-weight: normal
+  // span
+  //   display: block
+  //   font-weight: normal
+  //   font-size: .9em
+form
+  +span(full)
+  padding: 20px 20px 60px
+  +border-radius(3px)
+  background: $color-light
+input[type="text"], textarea
+  width: 100%
+  border: 1px solid $color-light
+  padding: 5px
+  font-family: $font-regu
+  font-size: 1rem
+  color: black
+  background: white image-url("optionnel.png")
+
+textarea
+  height: 120px
+  &.resume-ta
+    height: 75px!important
+
+.cfh-form
+  .descriptif textarea
+    height: 332px
+
+
+.cfh-valid input
+  margin: 0 auto
+
+.file
+  float: left
+  margin-right: 20px
+  vertical-align: top
+input[type="submit"]
+  border: none
+  @extend .button
+  cursor: pointer
+  clear: both
+
+.form--success-msg
+  color: #C00101
+  font-weight: bold
+
+.error
+  display: block
+  color: red
+  margin-top: 5px
+
+input[placeholder], [placeholder], *[placeholder]
+  color: #B2B2B2
+  font-style: italic
+  &:focus
+    font-style: normal
+    color: black

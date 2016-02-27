@@ -1,0 +1,39 @@
+
+#menu
+  background: white
+  width: 100%
+  z-index: 10
+  border-top: 10px solid $color-dark
+
+  ul
+    text-align: center
+    text-transform: uppercase
+    top: -15px
+
+    +single-transition(top, .2s)
+  &.onTop
+    position: fixed
+    width: 100%
+    top: 0
+    +box-shadow(0 0 35px rgba(0,0,0,0.2))
+    //li.now a
+      //background: $yellow
+
+  li
+    display: inline-block
+    padding: 5px 20px
+    a
+      color: $color-dark
+      display: inline-block
+      font-size: 1em
+      font-weight: 700
+      border: none
+      padding: 2px 0
+      &:before
+        content: "*"
+        font-size: 150%
+        opacity: 0
+        margin-right: 2px
+        color: $color-hot
+    &.active a:before, a:hover:before
+      opacity: 1

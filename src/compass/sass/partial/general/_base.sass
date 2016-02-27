@@ -1,0 +1,111 @@
+// =====================================================================
+// RÈGLES DE BASE
+// --------------
+// Les règles de base sont les règles par défaut. Elles concernent
+// presque exclusivement les sélecteurs d'éléments uniques mais peu-
+// vent également inclure des sélecteurs d'attributs, des sélecteurs de
+// pseudo-classes, des sélecteurs d'enfant ou des sélecteurs adjacents.
+// Un style de base dit essentiellement que, quel que soit l'endroit où
+// se trouve l'élément sur la page, il doit porter tel style.
+// =====================================================================
+
+
+
+html
+  font-family: $font-regu
+  background: $color-light
+
+body
+  color: black
+
+
+// Rétablissement des puces sur certaines listes
+ul.bullets li
+  list-style: disc inside
+  ul
+    margin: 0
+    li
+      list-style: circle
+      margin: 0 0 0 25px
+
+ol.bullets
+  margin-left: 1.5em
+  li
+    list-style: decimal
+
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-title
+
+h1
+  font: bold 1.5em/1.3 $font-regu
+  margin-bottom: gutter(12)
+  text-transform: uppercase
+
+h2
+  font: bold 1.4em/1.3 $font-regu
+  margin: gutter(12) 0
+
+h3
+  font: bold 1em/1.3 $font-regu
+  margin: gutter(12) 0
+
+p, ul
+  font-size: .85em
+  line-height: 1.4em
+  font-weight: 400
+  margin-bottom: 1.3em
+
+.bullets
+  list-style: disc none
+  padding-left: 1.5em
+
+small
+  font-size: .8em
+  line-height: 1.2em
+
+sup
+  vertical-align: super
+  font-size: .5em
+
+a
+  text-decoration: none
+//   color: $color-link
+//   &:hover
+//     color: lighten($color-link, 20)
+//   @at-root .bg-white &
+//     color: darken($color-link, 20%)
+//     &:hover
+//       color: $color-link
+
+
+p a, .bullets a, h3 a
+  color: $color-dark !important
+  border-bottom: 1px $color-hot solid
+  display: inline-block
+  padding-bottom: 2px
+  font-weight: bold
+  &:hover
+    border-bottom-color: $color-hot-light
+    color: $color-text-light !important
+
+em, i
+  font-style: italic
+
+hr
+  display: block
+  height: 1px
+  border: none
+  border-top: 1px solid $color-light
+  clear: both
+  margin: 2em 0
+
+.txt--center
+  text-align: center
+.txt--right
+  text-align: right
+
+.txt--stabilo
+  background: $color-hot
+  padding: 0 5px
+
